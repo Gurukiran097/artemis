@@ -43,18 +43,18 @@ def create_base_network():
 	return model
 
 def create_data():
-	files = []
-	global x_train
-	global y_train
-	for file in os.listdir(os.getcwd()):
-		if os.path.isfile(os.path.join(os.getcwd(), file)):
-			files.append(file)
-	files.remove('network.py')
-	for file in files:
-		x_train.append(cv2.imread(os.path.join(os.getcwd(), file)))
-		y_train.append(file[:len(file)-4])
-	x_train = np.array(x_train)
-	y_train = np.array(y_train)
+# 	files = []
+# 	global x_train
+# 	global y_train
+# 	for file in os.listdir(os.getcwd()):
+# 		if os.path.isfile(os.path.join(os.getcwd(), file)):
+# 			files.append(file)
+# 	files.remove('network.py')
+# 	for file in files:
+# 		x_train.append(cv2.imread(os.path.join(os.getcwd(), file)))
+# 		y_train.append(file[:len(file)-4])
+# 	x_train = np.array(x_train)
+# 	y_train = np.array(y_train)
 
 
 
@@ -82,5 +82,3 @@ create_data()
 
 model.fit(x_train,Y_train,nb_epoch=10)
 
-#https://www.limetorrents.cc/Dragon-Age-Inquisition-DE-repack-Mr-DJ-torrent-7829190.html
-#https://www.limetorrents.cc/-torrent-5687032.html
